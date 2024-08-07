@@ -4,8 +4,6 @@ import {ProductsAdminComponent} from "./src/app/product/products-admin/products-
 import {ProductsComponent} from "./src/app/product/products/products.component";
 
 const routes: Routes = [
-  { path: 'admin/products', component: ProductsAdminComponent },
-  { path: 'products', component: ProductsComponent}
 
 ];
 
