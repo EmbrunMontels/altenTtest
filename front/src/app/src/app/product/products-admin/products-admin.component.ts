@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from "../product.service";
 
 @Component({
   selector: 'app-products-admin',
@@ -6,10 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-admin.component.scss']
 })
 export class ProductsAdminComponent implements OnInit {
-
-  constructor() { }
+  products: any[] = [];
+  selectedProduct: any;
+  constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+      console.log(this.products)
+    })
   }
+
+  onRowEditInit(product: any) {
+
+  }
+
+  onRowEditSave(product: any) {
+
+  }
+
+  onRowEditCancel(product: any, index: number) {
+
+  }
+
 
 }
